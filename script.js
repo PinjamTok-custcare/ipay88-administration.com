@@ -1074,3 +1074,24 @@ function validateDJCust(input) {
         input.classList.remove('border-red-500');
     }
 }
+
+// Tunggu sehingga seluruh laman web (DOM) siap dimuat (load)
+document.addEventListener("DOMContentLoaded", function() {
+    
+    // Panggil fail features.html
+    fetch('features.html')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Ralat semasa memuat turun fail');
+            }
+            return response.text();
+        })
+        .then(data => {
+            // Masukkan kod dari features.html ke dalam bekas kosong
+            document.getElementById('features-container').innerHTML = data;
+        })
+        .catch(error => {
+            console.error('Terdapat masalah memuat turun seksyen:', error);
+        });
+
+});
