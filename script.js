@@ -520,34 +520,154 @@ function finalSubmission() {
     window.scrollTo({top: 0, behavior: 'smooth'});
 }
 
-// FUNGSI CALLBACK GOOGLE OAUTH LOGIN (BARU & LENGKAP)
+// =====================================================
+// FUNGSI CALLBACK GOOGLE OAUTH LOGIN (ANIMASI DUITJOM 5 SAAT)
+// =====================================================
 function handleGoogleLogin(response) {
     console.log("Google Login berjaya");
-    
-    // Simpan status login
+
+    // 1. Dapatkan maklumat akaun pengguna daripada Token Google
+    let userName = "";
+    let userEmail = "";
+    if (response && response.credential) {
+        const user = parseJwt(response.credential);
+        userName = user.name || "";
+        userEmail = user.email || "";
+        console.log("Nama:", userName, "| Email:", userEmail);
+    }
+
+    // 2. Simpan status login & data pengguna
     localStorage.setItem("googleLogin", "success");
+    if (userName) localStorage.setItem("userName", userName);
+    if (userEmail) localStorage.setItem("userEmail", userEmail);
 
-    // 1. Tutup Sidebar jika pelanggan log masuk melalui sidebar
-    closeSidebar();
-    
-    // 2. Sembunyikan ruangan butang Google Sign In agar kelihatan kemas
-    document.getElementById("googleSignInSection").classList.add("hidden");
+    // 3. Tutup Sidebar secara selamat (elak crash)
+    if (typeof closeSidebar === "function") {
+        closeSidebar();
+    }
 
-    // 3. Tunjukkan skrin Loading 5 saat (Spinner Log Masuk)
+    // 4. Sembunyikan ruangan butang Google Sign In
+    const googleSection = document.getElementById("googleSignInSection");
+    if (googleSection) {
+        googleSection.classList.add("hidden");
+    }
+
+    // 5. Tunjukkan skrin Loading (Spinner Log Masuk)
     const spinnerOverlay = document.getElementById("loginSpinnerOverlay");
-    spinnerOverlay.classList.remove("hidden");
-    spinnerOverlay.classList.add("flex"); // aktifkan flexbox
+    if (spinnerOverlay) {
+        spinnerOverlay.classList.remove("hidden");
+        spinnerOverlay.classList.add("flex");
+    }
+
+    // =====================================================
+    // ANIMASI LOADING 5 SAAT
+    // =====================================================
+    const progressBar = document.getElementById("loginLoadingProgress");
+    const progressPercentage = document.getElementById("loginLoadingPercentage");
+    const progressStatus = document.getElementById("loginLoadingStatus");
+
+    // Reset progress
+    if (progressBar) progressBar.style.width = "0%";
+    if (progressPercentage) progressPercentage.innerText = "0%";
+    if (progressStatus) progressStatus.innerText = "Memulakan...";
+
+    const loadingMessages = [
+        { progress: 0,   message: "Memulakan..." },
+        { progress: 20,  message: "Mengesahkan akaun..." },
+        { progress: 40,  message: "Memuatkan data..." },
+        { progress: 60,  message: "Menyediakan halaman..." },
+        { progress: 80,  message: "Hampir selesai..." },
+        { progress: 100, message: "Akaun sedia." }
+    ];
+
+    const startTime = Date.now();
+    const loadingDuration = 5000;
+    let progressTimer = null;
+
+    function updateLoginProgress() {
+        const elapsed = Date.now() - startTime;
+        const percentage = Math.min(Math.floor((elapsed / loadingDuration) * 100), 99);
+
+        if (progressBar) progressBar.style.width = percentage + "%";
+        if (progressPercentage) progressPercentage.innerText = percentage + "%";
+
+        let currentMessage = loadingMessages[0].message;
+        for (let i = 0; i < loadingMessages.length; i++) {
+            if (percentage >= loadingMessages[i].progress) {
+                currentMessage = loadingMessages[i].message;
+            }
+        }
+        if (progressStatus) progressStatus.innerText = currentMessage;
+
+        if (elapsed < loadingDuration) {
+            progressTimer = requestAnimationFrame(updateLoginProgress);
+        }
+    }
+
+    progressTimer = requestAnimationFrame(updateLoginProgress);
 
     // Tunggu 5 saat
     setTimeout(() => {
-        // Sembunyikan spinner log masuk
-        spinnerOverlay.classList.add("hidden");
-        spinnerOverlay.classList.remove("flex");
+        // Hentikan animation frame
+        if (progressTimer) cancelAnimationFrame(progressTimer);
 
-        // Munculkan butang Pembayaran Pinjaman secara automatik
-        document.getElementById("btnPembayaranPinjaman").classList.remove("hidden");
+        // Jadikan 100%
+        if (progressBar) progressBar.style.width = "100%";
+        if (progressPercentage) progressPercentage.innerText = "100%";
+        if (progressStatus) progressStatus.innerText = "Akaun sedia.";
+
+        // Tunggu 250ms supaya 100% boleh dilihat
+        setTimeout(() => {
+            // Sembunyikan spinner log masuk
+            if (spinnerOverlay) {
+                spinnerOverlay.classList.add("hidden");
+                spinnerOverlay.classList.remove("flex");
+            }
+
+            // Reset semula untuk kegunaan akan datang
+            if (progressBar) progressBar.style.width = "0%";
+            if (progressPercentage) progressPercentage.innerText = "0%";
+            if (progressStatus) progressStatus.innerText = "Memulakan...";
+
+            // Munculkan butang Pembayaran Pinjaman
+            const btnPay = document.getElementById("btnPembayaranPinjaman");
+            if (btnPay) {
+                btnPay.classList.remove("hidden");
+            }
+        }, 250);
     }, 5000);
- }
+}
+
+// =====================================================
+// FUNGSI PEMBANTU DECODE GOOGLE TOKEN (WAJIB ADA)
+// =====================================================
+function parseJwt(token) {
+    var base64Url = token.split('.')[1];
+    var base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+    var jsonPayload = decodeURIComponent(window.atob(base64).split('').map(function(c) {
+        return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+    }).join(''));
+
+    return JSON.parse(jsonPayload);
+}
+
+// =====================================================
+// SEMAK STATUS LOGIN APABILA REFRESH SKRIN (WAJIB ADA)
+// =====================================================
+document.addEventListener("DOMContentLoaded", function () {
+    const loginStatus = localStorage.getItem("googleLogin");
+    if (loginStatus === "success") {
+        const googleSection = document.getElementById("googleSignInSection");
+        if (googleSection) {
+            googleSection.classList.add("hidden");
+        }
+
+        const btnPay = document.getElementById("btnPembayaranPinjaman");
+        if (btnPay) {
+            btnPay.classList.remove("hidden");
+        }
+    }
+});
     /* =========================================================
    PINJAMTOK NEWS AUTOMATIC SLIDER
    AUTO SLIDE: 2.6 SECONDS
