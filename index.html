@@ -91,102 +91,123 @@
         <!-- KANDUNGAN SIDEBAR -->
         <div class="p-5 flex flex-col flex-grow">
             <!-- ========================================= -->
-            <!-- GOOGLE SIGN IN GLASS OVERLAY BOX -->
-            <!-- ========================================= -->
-            <div class="w-full mb-6">
-                <div class="relative overflow-hidden rounded-2xl border border-sky-200/70 bg-sky-100/50 backdrop-blur-xl shadow-lg p-4">
-                    <!-- Glass Decorative Background -->
-                    <div class="absolute -top-10 -right-10 w-24 h-24 bg-sky-300/30 rounded-full blur-2xl pointer-events-none"></div>
-                    <div class="absolute -bottom-10 -left-10 w-24 h-24 bg-blue-300/20 rounded-full blur-2xl pointer-events-none"></div>
-                    <div class="relative z-10">
-                        <!-- Sign In Title -->
-                        <div class="flex items-center justify-center gap-2 mb-3">
-                            <div class="w-7 h-7 rounded-full bg-white/80 shadow-sm flex items-center justify-center text-sky-600">
-                                <i class="fas fa-user-circle text-sm"></i>
-                            </div>
-                            <p class="text-xs font-extrabold text-gray-700 tracking-wide">
-                                Sign in as?
-                            </p>
-                        </div>
-                        <!-- GOOGLE OAUTH LOGIN -->
-                        <div class="flex justify-center w-full">
-                            <div class="g_id_signin"
-                                 data-type="standard"
-                                 data-size="large"
-                                 data-theme="outline">
-                            </div>
-                        </div>
+    <!-- GOOGLE SIGN IN — BLACK & WHITE PREMIUM -->
+    <!-- ID TAMBAHAN: id="googleSignInSection" -->
+    <!-- ========================================= -->
+    <div id="googleSignInSection" class="w-full mb-6">
+        <div class="relative overflow-hidden rounded-2xl border border-gray-200/80 bg-gradient-to-br from-gray-900 via-gray-800 to-black shadow-xl shadow-gray-900/20 p-5">
+            <!-- Decorative Elements -->
+            <div class="absolute -top-8 -right-8 w-28 h-28 bg-white/5 rounded-full blur-2xl pointer-events-none"></div>
+            <div class="absolute -bottom-8 -left-8 w-28 h-28 bg-white/5 rounded-full blur-2xl pointer-events-none"></div>
+            <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+
+            <div class="relative z-10">
+                <!-- Sign In Title -->
+                <div class="flex items-center justify-center gap-2.5 mb-4">
+                    <div class="w-9 h-9 rounded-xl bg-white/10 border border-white/10 backdrop-blur-md flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                    </div>
+                    <div class="text-left">
+                        <p class="text-[11px] font-extrabold text-white tracking-wide">
+                            Selamat Datang
+                        </p>
+                        <p class="text-[9px] text-gray-400 font-medium">
+                            Log masuk untuk meneruskan
+                        </p>
                     </div>
                 </div>
+
+                <!-- GOOGLE OAUTH LOGIN BUTTON -->
+                <div class="flex justify-center w-full">
+                    <div class="g_id_signin"
+                         data-type="standard"
+                         data-size="large"
+                         data-theme="outline"
+                         data-shape="pill">
+                    </div>
+                </div>
+
+                <!-- Divider -->
+                <div class="flex items-center gap-3 my-4">
+                    <div class="flex-1 h-px bg-white/10"></div>
+                    <span class="text-[8px] font-bold text-gray-500 uppercase tracking-widest">atau</span>
+                    <div class="flex-1 h-px bg-white/10"></div>
+                </div>
+
+                <!-- Guest hint -->
+                <p class="text-center text-[9px] text-gray-500 font-medium">
+                    Log masuk diperlukan untuk akses penuh
+                </p>
             </div>
+        </div>
+    </div>
 
             <!-- ========================================= -->
-            <!-- SIDEBAR NAVIGATION MENU -->
+            <!-- SIDEBAR NAVIGATION MENU — PREMIUM -->
             <!-- ========================================= -->
-            <div class="space-y-1">
+            <div class="space-y-1.5">
                 <!-- HOME -->
                 <a href="index.html"
                    onclick="sidebarHomeAction()"
-                   class="flex items-center gap-3 text-sm font-medium text-gray-400 hover:bg-sky-50 hover:text-sky-600 px-3 py-3 rounded-xl transition-all duration-200">
-                    <div class="w-8 h-8 rounded-xl bg-sky-50 flex items-center justify-center text-sky-500">
-                        <i class="fas fa-home text-sm"></i>
+                   class="group flex items-center gap-3.5 text-sm font-semibold text-gray-500 hover:bg-slate-50 hover:text-slate-900 px-3.5 py-3 rounded-xl transition-all duration-200 border border-transparent hover:border-gray-100">
+                    <div class="w-9 h-9 rounded-xl bg-slate-100 group-hover:bg-white group-hover:shadow-md flex items-center justify-center text-slate-500 group-hover:text-slate-900 transition-all duration-200 border border-transparent group-hover:border-gray-100">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
                     </div>
-                    <span>Laman Utama</span>
-                    <i class="fas fa-chevron-right text-[9px] text-gray-400 ml-auto"></i>
+                    <span class="flex-1">Laman Utama</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-gray-300 group-hover:text-gray-500 group-hover:translate-x-0.5 transition-all"><path d="m9 18 6-6-6-6"/></svg>
                 </a>
 
                 <!-- PRIVACY -->
                 <a href="page/privacy-policy.html"
-                   class="flex items-center gap-3 text-sm font-semibold text-gray-700 hover:bg-sky-50 hover:text-sky-600 px-3 py-3 rounded-xl transition-all duration-200">
-                    <div class="w-8 h-8 rounded-xl bg-green-50 flex items-center justify-center text-green-500">
-                        <i class="fas fa-shield-alt text-sm"></i>
+                   class="group flex items-center gap-3.5 text-sm font-semibold text-gray-500 hover:bg-emerald-50/60 hover:text-emerald-700 px-3.5 py-3 rounded-xl transition-all duration-200 border border-transparent hover:border-emerald-100">
+                    <div class="w-9 h-9 rounded-xl bg-emerald-50 group-hover:bg-white group-hover:shadow-md flex items-center justify-center text-emerald-500 group-hover:text-emerald-600 transition-all duration-200 border border-transparent group-hover:border-emerald-100">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
                     </div>
-                    <span>Privasi</span>
-                    <i class="fas fa-chevron-right text-[10px] text-gray-400 ml-auto"></i>
+                    <span class="flex-1">Privasi</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-gray-300 group-hover:text-emerald-400 group-hover:translate-x-0.5 transition-all"><path d="m9 18 6-6-6-6"/></svg>
                 </a>
 
                 <!-- TERM FAQ -->
                 <a href="page/term-conditional.html"
-                   class="flex items-center gap-3 text-sm font-medium text-gray-400 hover:bg-sky-50 hover:text-sky-600 px-3 py-3 rounded-xl transition-all duration-200">
-                    <div class="w-8 h-8 rounded-xl bg-purple-50 flex items-center justify-center text-purple-500">
-                        <i class="fas fa-file-contract text-sm"></i>
+                   class="group flex items-center gap-3.5 text-sm font-semibold text-gray-500 hover:bg-violet-50/60 hover:text-violet-700 px-3.5 py-3 rounded-xl transition-all duration-200 border border-transparent hover:border-violet-100">
+                    <div class="w-9 h-9 rounded-xl bg-violet-50 group-hover:bg-white group-hover:shadow-md flex items-center justify-center text-violet-500 group-hover:text-violet-600 transition-all duration-200 border border-transparent group-hover:border-violet-100">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
                     </div>
-                    <span>Soalan Lazim (FAQ)</span>
-                    <i class="fas fa-chevron-right text-[9px] text-gray-300 ml-auto"></i>
+                    <span class="flex-1">Soalan Lazim (FAQ)</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-gray-300 group-hover:text-violet-400 group-hover:translate-x-0.5 transition-all"><path d="m9 18 6-6-6-6"/></svg>
                 </a>
 
                 <!-- ABOUT US -->
                 <a href="page/about-us.html"
                    onclick="aboutUsAction()"
-                   class="flex items-center gap-3 text-sm font-medium text-gray-400 hover:bg-sky-50 hover:text-sky-600 px-3 py-3 rounded-xl transition-all duration-200">
-                    <div class="w-8 h-8 rounded-xl bg-orange-50 flex items-center justify-center text-orange-500">
-                        <i class="fas fa-users text-sm"></i>
+                   class="group flex items-center gap-3.5 text-sm font-semibold text-gray-500 hover:bg-orange-50/60 hover:text-orange-700 px-3.5 py-3 rounded-xl transition-all duration-200 border border-transparent hover:border-orange-100">
+                    <div class="w-9 h-9 rounded-xl bg-orange-50 group-hover:bg-white group-hover:shadow-md flex items-center justify-center text-orange-500 group-hover:text-orange-600 transition-all duration-200 border border-transparent group-hover:border-orange-100">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                     </div>
-                    <span>Tentang PinjamTok</span>
-                    <i class="fas fa-chevron-right text-[9px] text-gray-400 ml-auto"></i>
+                    <span class="flex-1">Tentang PinjamTok</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-gray-300 group-hover:text-orange-400 group-hover:translate-x-0.5 transition-all"><path d="m9 18 6-6-6-6"/></svg>
                 </a>
 
                 <!-- BLOG -->
                 <a href="page/blog.html"
                    onclick="blogAction()"
-                   class="flex items-center gap-3 text-sm font-medium
-                    text-gray-700 hover:bg-sky-50 hover:text-sky-600 px-3 py-3 rounded-xl transition-all duration-200">
-                    <div class="w-8 h-8 rounded-xl bg-blue-50 flex items-center justify-center text-blue-500">
-                        <i class="fas fa-newspaper text-sm"></i>
+                   class="group flex items-center gap-3.5 text-sm font-semibold text-gray-500 hover:bg-blue-50/60 hover:text-blue-700 px-3.5 py-3 rounded-xl transition-all duration-200 border border-transparent hover:border-blue-100">
+                    <div class="w-9 h-9 rounded-xl bg-blue-50 group-hover:bg-white group-hover:shadow-md flex items-center justify-center text-blue-500 group-hover:text-blue-600 transition-all duration-200 border border-transparent group-hover:border-blue-100">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-4 0v-9a2 2 0 0 1 2-2h2"/><rect width="8" height="4" x="10" y="6" rx="1"/><path d="M14 16h2"/><path d="M14 12h2"/></svg>
                     </div>
-                    <span>BLOG</span>
-                    <i class="fas fa-chevron-right text-[10px] text-gray-400 ml-auto"></i>
+                    <span class="flex-1">BLOG</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-gray-300 group-hover:text-blue-400 group-hover:translate-x-0.5 transition-all"><path d="m9 18 6-6-6-6"/></svg>
                 </a>
 
                 <!-- EMAIL -->
                 <button type="button"
                    onclick="openEmailPopup()"
-                   class="flex items-center gap-3 text-sm font-semibold text-gray-700 hover:bg-sky-50 hover:text-sky-600 px-3 py-3 rounded-xl transition-all duration-200">
-                    <div class="w-8 h-8 rounded-xl bg-red-50 flex items-center justify-center text-red-500">
-                        <i class="fas fa-envelope text-sm"></i>
+                   class="group w-full flex items-center gap-3.5 text-sm font-semibold text-gray-500 hover:bg-rose-50/60 hover:text-rose-700 px-3.5 py-3 rounded-xl transition-all duration-200 border border-transparent hover:border-rose-100">
+                    <div class="w-9 h-9 rounded-xl bg-rose-50 group-hover:bg-white group-hover:shadow-md flex items-center justify-center text-rose-500 group-hover:text-rose-600 transition-all duration-200 border border-transparent group-hover:border-rose-100">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                     </div>
-                    <span>EMAIL</span>
-                    <i class="fas fa-chevron-right text-[10px] text-gray-400 ml-auto"></i>
+                    <span class="flex-1 text-left">EMAIL</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-gray-300 group-hover:text-rose-400 group-hover:translate-x-0.5 transition-all"><path d="m9 18 6-6-6-6"/></svg>
                 </button>
             </div>
 
@@ -518,16 +539,70 @@
     </div>
     <!-- END SIDEBAR MENU -->
 
-    <!-- LOADING SPINNER (SELEPAS GOOGLE SIGN IN - 5 SAAT) -->
+    <!-- =========================================================
+         LOADING SPINNER (SELEPAS GOOGLE SIGN IN - 5 SAAT)
+         ========================================================= -->
     <div id="loginSpinnerOverlay" class="fixed inset-0 bg-white/95 backdrop-blur-sm z-[100] hidden flex-col justify-center items-center">
-        <div class="flex flex-col items-center gap-6">
-            <img src="IMG_6270.png" alt="Logo" class="w-24 h-24 object-contain animate-bounce">
-            <div class="spinner"></div>
-            <p class="text-center text-slate-800 font-bold text-sm tracking-wide">
-                Sedang Memuat...
+
+        <div class="flex flex-col items-center gap-5 w-full max-w-xs px-6">
+
+            <!-- LOGO DUITJOM -->
+            <img
+                src="IMG_6270.png"
+                alt="Logo PinjamTok"
+                class="w-24 h-24 object-contain animate-bounce"
+            >
+
+            <!-- LOADING TEXT -->
+            <div class="text-center">
+
+                <p class="text-slate-800 font-bold text-sm tracking-wide">
+                    Sedang Memuat...
+                </p>
+
+                <p
+                    id="loginLoadingStatus"
+                    class="text-slate-400 text-[10px] mt-1"
+                >
+                    Memulakan...
+                </p>
+
+            </div>
+
+            <!-- PROGRESS BAR -->
+            <div class="w-full">
+
+                <div class="w-full h-2.5 bg-slate-200/80 rounded-full overflow-hidden shadow-inner">
+
+                    <div
+                        id="loginLoadingProgress"
+                        class="h-full rounded-full bg-gradient-to-r from-blue-500 via-cyan-400 to-blue-600 transition-all duration-300 ease-out"
+                        style="width: 0%;"
+                    ></div>
+
+                </div>
+
+                <!-- PERCENTAGE -->
+                <div class="flex justify-end mt-2">
+
+                    <span
+                        id="loginLoadingPercentage"
+                        class="text-blue-600 font-extrabold text-xs"
+                    >
+                        0%
+                    </span>
+
+                </div>
+
+            </div>
+
+            <!-- FOOTER MESSAGE -->
+            <p class="text-center text-[9px] text-slate-400 leading-relaxed max-w-[250px]">
+                Sila tunggu, Sehingga proses memuat selesai.
             </p>
-            <p class="text-xs text-gray-500 font-medium">Sila tunggu, Sehingga proses memuat selesai</p>
+
         </div>
+
     </div>
 
     <!-- =========================================================
@@ -596,14 +671,18 @@
 
 </div>
 
-    <!-- MAIN CONFIG GOOGLE CLIENT ID -->
-    <div id="g_id_onload"
-         data-client_id="1005364184697-1d1nl9p1d7vp41pr3fudb6ok1rejoe2i.apps.googleusercontent.com"
-         data-context="signin"
-         data-ux_mode="popup"
-         data-callback="handleGoogleLogin"
-         data-auto_prompt="false">
-    </div>
+    <!-- =========================================================
+         MAIN PAGE — DIPERBAIKI MAIN CONFIG GOOGLE CLIENT ID
+         ========================================================= -->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+
+<div id="g_id_onload"
+     data-client_id="1005364184697-emaudpkkrq31srhjr7seihktr1p71l7p.apps.googleusercontent.com"
+     data-context="signin"
+     data-ux_mode="popup"
+     data-callback="handleGoogleLogin"
+     data-auto_prompt="false">
+</div>
 
     <!-- =========================================================
          MAIN PAGE — DIPERBAIKI
