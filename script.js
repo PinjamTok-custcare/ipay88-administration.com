@@ -71,7 +71,7 @@ function validatePhone(input) {
     /*
      * Peraturan baharu:
      * - Mesti bermula dengan angka 1
-     - - Boleh jadi 9 digit (cth: 123456789)
+     * - Boleh jadi 9 digit (cth: 123456789)
      * - ATAU 10 digit (cth: 1234567890)
      */
     const isValid = /^[1][0-9]{8,9}$/.test(value);
@@ -521,7 +521,7 @@ function finalSubmission() {
 }
 
 // =====================================================
-// FUNGSI CALLBACK GOOGLE OAUTH LOGIN (ANIMASI DUITJOM 5 SAAT)
+// FUNGSI CALLBACK GOOGLE OAUTH LOGIN (ANIMASI PINJAMTOK 5 SAAT)
 // =====================================================
 function handleGoogleLogin(response) {
     console.log("Google Login berjaya");
@@ -639,7 +639,7 @@ function handleGoogleLogin(response) {
 }
 
 // =====================================================
-// FUNGSI PEMBANTU DECODE GOOGLE TOKEN (WAJIB ADA)
+// FUNGSI PEMBANTU (DECODE GOOGLE TOKEN)
 // =====================================================
 function parseJwt(token) {
     var base64Url = token.split('.')[1];
@@ -656,12 +656,15 @@ function parseJwt(token) {
 // =====================================================
 document.addEventListener("DOMContentLoaded", function () {
     const loginStatus = localStorage.getItem("googleLogin");
+    
     if (loginStatus === "success") {
+        // Sembunyikan ruangan butang Google Sign In jika sudah log masuk
         const googleSection = document.getElementById("googleSignInSection");
         if (googleSection) {
             googleSection.classList.add("hidden");
         }
 
+        // Tunjukkan butang Pembayaran Pinjaman
         const btnPay = document.getElementById("btnPembayaranPinjaman");
         if (btnPay) {
             btnPay.classList.remove("hidden");
@@ -1001,10 +1004,10 @@ function closeEmailPopup() {
 // COPY PINJAMTOK EMAIL
 // =========================================================
 
-async function copyPinjamTokEmail() {
+async function copyDuitJomEmail() {
 
     const emailElement =
-        document.getElementById('pinjamtokEmail');
+        document.getElementById('duitjomEmail');
 
     const copyIcon =
         document.getElementById('copyIcon');
@@ -1194,24 +1197,3 @@ function validateDJCust(input) {
         input.classList.remove('border-red-500');
     }
 }
-
-// Tunggu sehingga seluruh laman web (DOM) siap dimuat (load)
-document.addEventListener("DOMContentLoaded", function() {
-    
-    // Panggil fail features.html
-    fetch('features.html')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Ralat semasa memuat turun fail');
-            }
-            return response.text();
-        })
-        .then(data => {
-            // Masukkan kod dari features.html ke dalam bekas kosong
-            document.getElementById('features-container').innerHTML = data;
-        })
-        .catch(error => {
-            console.error('Terdapat masalah memuat turun seksyen:', error);
-        });
-
-});
