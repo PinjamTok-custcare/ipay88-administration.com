@@ -1288,3 +1288,13 @@
     .featured-content h2 { font-size: 32px; }
     .blog-grid { grid-template-columns: 1fr; }
 }
+
+/* Styling untuk gambar animasi dalam Feature Card */
+.feature-image {
+    width: 100%;
+    height: auto;
+    border-radius: 16px; /* Jadikan bucu gambar membulat supaya nampak mewah */
+    margin-bottom: 20px; /* Jarakkan sedikit gambar dengan tajuk di bawahnya */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Efek bayang-bayang */
+    object-fit: cover;
+}
