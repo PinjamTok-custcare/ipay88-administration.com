@@ -1,293 +1,259 @@
-<!DOCTYPE html>
-<html lang="ms">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Features & News - PinjamTok</title>
+<!-- =====================================================
+     BAHAGIAN KELAS & KAD CIRI-CIRI (FEATURES) PINJAMTOK
+===================================================== -->
 
-    <!-- FONT AWESOME (WAJIB: Untuk memaparkan icon seperti fa-gem, fa-bullhorn) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<!-- BACKGROUND ORBS (Pilihan - Boleh padam jika ganggu latar belakang asal anda) -->
+<div class="background-orb orb-one"></div>
+<div class="background-orb orb-two"></div>
+<div class="background-orb orb-three"></div>
+<div class="background-orb orb-four"></div>
 
-    <!-- TAILWIND CSS (Jika anda ada guna class tailwind di dalam projek ini) -->
-    <script src="https://cdn.tailwindcss.com"></script>
+<!-- HERO SECTION EKSKLUSIF -->
+<section class="hero">
+    <div class="luxury-label"><i class="fas fa-gem"></i> PINJAMTOK EXCLUSIVE</div>
+    <h1>News & <span>Updates</span></h1>
+    <p class="hero-description">
+        Dapatkan informasi, berita, panduan dan kemas kini terkini daripada PinjamTok dalam satu platform eksklusif dan mewah.
+    </p>
+</section>
 
-    <!-- LINK KE FAIL CSS ANDA (SANGAT PENTING) -->
-    <!-- Kod anda menggunakan class seperti 'hero', 'feature-card', 'luxury-label'. 
-         Pastikan anda pautkan fail CSS (contoh: style.css) yang mengandungi rekaan class tersebut -->
-    <link rel="stylesheet" href="style.css"> 
-</head>
-<body class="bg-gray-50 text-gray-900">
+<!-- KAD "KENAPA PINJAMTOK?" -->
+<section class="features-section">
+    <div class="section-title">
+        <small>Kelebihan Kami</small>
+        <h2>Kenapa PinjamTok?</h2>
+    </div>
+    
+    <div class="features-grid">
+        
+        <!-- CARD 1 -->
+        <div class="feature-card">
+            <div class="live-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                </svg>
+            </div>
+            <h3>Pantas Kilat</h3>
+            <p>Dapatkan kelulusan dalam masa 5 minit sahaja dengan sistem penilaian bertenaga AI kami. Tiada lagi menunggu berhari-hari untuk kelulusan pinjaman.</p>
+            <div class="feature-badges">
+                <span class="glass-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    5min MASA KELULUSAN
+                </span>
+                <span class="glass-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                    24/7 TERSEDIA
+                </span>
+            </div>
+        </div>
 
-    <!-- ========================================= -->
-    <!-- NAVIGASI KEMBALI KE HALAMAN UTAMA         -->
-    <!-- ========================================= -->
-    <div class="p-6 max-w-7xl mx-auto">
-        <a href="index.html" class="inline-flex items-center gap-2 px-4 py-2 bg-gray-800 text-white text-sm font-semibold rounded-xl hover:bg-gray-700 transition shadow-md">
-            <i class="fas fa-arrow-left"></i> Kembali
-        </a>
-    </div>
+        <!-- CARD 2 -->
+        <div class="feature-card">
+            <div class="live-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <path d="M9 15l2 2 4-4"></path>
+                </svg>
+            </div>
+            <h3>Permohonan Mudah</h3>
+            <p>Hanya MyKad dan nombor telefon anda - itu sahaja yang anda perlukan. Proses yang diperkemas kami menghapuskan kertas kerja yang tidak perlu.</p>
+            <div class="feature-badges">
+                <span class="glass-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                    Hanya MyKad diperlukan
+                </span>
+                <span class="glass-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="9" y1="15" x2="15" y2="15"></line></svg>
+                    Tiada dokumen pendapatan
+                </span>
+            </div>
+        </div>
 
-    <!-- =====================================================
-         BAHAGIAN KELAS & KAD CIRI-CIRI (FEATURES) PINJAMTOK
-    ===================================================== -->
-    <main class="max-w-7xl mx-auto px-4 pb-12">
-        <!-- BACKGROUND ORBS (Pilihan - Boleh padam jika ganggu latar belakang asal anda) -->
-        <div class="background-orb orb-one"></div>
-        <div class="background-orb orb-two"></div>
-        <div class="background-orb orb-three"></div>
-        <div class="background-orb orb-four"></div>
+        <!-- CARD 3 -->
+        <div class="feature-card">
+            <div class="live-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+            </div>
+            <h3>Keselamatan Gred Bank</h3>
+            <p>Data anda dilindungi dengan 256-bit SSL encryption dan protokol keselamatan canggih yang dipercayai oleh institusi kewangan utama.</p>
+            <div class="feature-badges">
+                <span class="glass-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M9 12l2 2 4-4"></path></svg>
+                    SSL Selamat
+                </span>
+                <span class="glass-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                    Data Dilindungi
+                </span>
+            </div>
+        </div>
 
-        <!-- HERO SECTION EKSKLUSIF -->
-        <section class="hero text-center my-12">
-            <div class="luxury-label inline-block px-4 py-1.5 rounded-full bg-blue-100 text-blue-700 text-xs font-bold mb-4"><i class="fas fa-gem mr-1"></i> PINJAMTOK EXCLUSIVE</div>
-            <h1 class="text-4xl font-extrabold mb-4">News & <span class="text-blue-600">Updates</span></h1>
-            <p class="hero-description text-gray-500 max-w-2xl mx-auto">
-                Dapatkan informasi, berita, panduan dan kemas kini terkini daripada PinjamTok dalam satu platform eksklusif dan mewah.
-            </p>
-        </section>
+        <!-- CARD 4 -->
+        <div class="feature-card">
+            <div class="live-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+            </div>
+            <h3>Ketelusan Penuh</h3>
+            <p>Tiada yuran tersembunyi atau caj mengejut. Anda akan tahu dengan tepat apa yang perlu anda bayar sebelum memohon dengan clear fee structure kami.</p>
+        </div>
 
-        <!-- KAD "KENAPA PINJAMTOK?" -->
-        <section class="features-section mb-16">
-            <div class="section-title text-center mb-10">
-                <small class="text-blue-500 font-bold uppercase tracking-wider text-xs">Kelebihan Kami</small>
-                <h2 class="text-3xl font-bold mt-2">Kenapa PinjamTok?</h2>
-            </div>
-            
-            <div class="features-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                
-                <!-- CARD 1 -->
-                <div class="feature-card bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-lg transition">
-                    <div class="live-icon w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-4">
-                        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Pantas Kilat</h3>
-                    <p class="text-gray-500 text-sm mb-4">Dapatkan kelulusan dalam masa 5 minit sahaja dengan sistem penilaian bertenaga AI kami. Tiada lagi menunggu berhari-hari untuk kelulusan pinjaman.</p>
-                    <div class="feature-badges flex flex-col gap-2">
-                        <span class="glass-badge inline-flex items-center gap-2 text-xs font-semibold bg-gray-50 px-3 py-1.5 rounded-lg text-gray-700">
-                            <svg class="w-4 h-4 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                            5min MASA KELULUSAN
-                        </span>
-                        <span class="glass-badge inline-flex items-center gap-2 text-xs font-semibold bg-gray-50 px-3 py-1.5 rounded-lg text-gray-700">
-                            <svg class="w-4 h-4 text-green-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-                            24/7 TERSEDIA
-                        </span>
-                    </div>
-                </div>
+        <!-- CARD 5 -->
+        <div class="feature-card">
+            <div class="live-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+            </div>
+            <h3>Untuk Semua Orang</h3>
+            <p>Kriteria kelayakan yang fleksibel bermakna lebih ramai orang boleh mengakses dana yang mereka perlukan, walaupun dengan less-than-perfect credit.</p>
+            <div class="feature-badges">
+                <span class="glass-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                    Umur 20-60
+                </span>
+                <span class="glass-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                    Sedang Bekerja
+                </span>
+            </div>
+        </div>
 
-                <!-- CARD 2 -->
-                <div class="feature-card bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-lg transition">
-                    <div class="live-icon w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-4">
-                        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                            <polyline points="14 2 14 8 20 8"></polyline>
-                            <path d="M9 15l2 2 4-4"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Permohonan Mudah</h3>
-                    <p class="text-gray-500 text-sm mb-4">Hanya MyKad dan nombor telefon anda - itu sahaja yang anda perlukan. Proses yang diperkemas kami menghapuskan kertas kerja yang tidak perlu.</p>
-                    <div class="feature-badges flex flex-col gap-2">
-                        <span class="glass-badge inline-flex items-center gap-2 text-xs font-semibold bg-gray-50 px-3 py-1.5 rounded-lg text-gray-700">
-                            <svg class="w-4 h-4 text-purple-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-                            Hanya MyKad diperlukan
-                        </span>
-                        <span class="glass-badge inline-flex items-center gap-2 text-xs font-semibold bg-gray-50 px-3 py-1.5 rounded-lg text-gray-700">
-                            <svg class="w-4 h-4 text-pink-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="9" y1="15" x2="15" y2="15"></line></svg>
-                            Tiada dokumen pendapatan
-                        </span>
-                    </div>
-                </div>
+        <!-- CARD 6 -->
+        <div class="feature-card">
+            <div class="live-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+            </div>
+            <h3>Tersedia 24/7</h3>
+            <p>Mohon bila-bila masa, di mana-mana sahaja. Platform kami tidak pernah tidur, jadi anda boleh mendapat bantuan kewangan yang anda perlukan bila-bila masa.</p>
+            <div class="feature-badges">
+                <span class="glass-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+                    Dioptimumkan Mudah Alih
+                </span>
+                <span class="glass-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                    Mesra Desktop
+                </span>
+            </div>
+        </div>
 
-                <!-- CARD 3 -->
-                <div class="feature-card bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-lg transition">
-                    <div class="live-icon w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-4">
-                        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Keselamatan Gred Bank</h3>
-                    <p class="text-gray-500 text-sm mb-4">Data anda dilindungi dengan 256-bit SSL encryption dan protokol keselamatan canggih yang dipercayai oleh institusi kewangan utama.</p>
-                    <div class="feature-badges flex flex-col gap-2">
-                        <span class="glass-badge inline-flex items-center gap-2 text-xs font-semibold bg-gray-50 px-3 py-1.5 rounded-lg text-gray-700">
-                            <svg class="w-4 h-4 text-green-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M9 12l2 2 4-4"></path></svg>
-                            SSL Selamat
-                        </span>
-                        <span class="glass-badge inline-flex items-center gap-2 text-xs font-semibold bg-gray-50 px-3 py-1.5 rounded-lg text-gray-700">
-                            <svg class="w-4 h-4 text-orange-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-                            Data Dilindungi
-                        </span>
-                    </div>
-                </div>
+    </div>
+</section>
 
-                <!-- CARD 4 -->
-                <div class="feature-card bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-lg transition">
-                    <div class="live-icon w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-4">
-                        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                            <circle cx="12" cy="12" r="3"></circle>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Ketelusan Penuh</h3>
-                    <p class="text-gray-500 text-sm mb-4">Tiada yuran tersembunyi atau caj mengejut. Anda akan tahu dengan tepat apa yang perlu anda bayar sebelum memohon dengan clear fee structure kami.</p>
-                </div>
+<!-- FEATURED ARTICLE -->
+<section class="featured">
+    <div class="featured-card">
+        <div class="featured-glow"></div>
+        <div class="featured-content">
+            <div class="featured-badge">Featured Update</div>
+            <h2>Selamat Datang ke PinjamTok News</h2>
+            <p>Ikuti perkembangan terkini, informasi penting dan kemas kini berkaitan pengalaman digital PinjamTok.</p>
+            <a href="#latest" class="read-featured">Baca Sekarang <i class="fas fa-arrow-down"></i></a>
+        </div>
+    </div>
+</section>
 
-                <!-- CARD 5 -->
-                <div class="feature-card bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-lg transition">
-                    <div class="live-icon w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-4">
-                        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                            <circle cx="9" cy="7" r="4"></circle>
-                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Untuk Semua Orang</h3>
-                    <p class="text-gray-500 text-sm mb-4">Kriteria kelayakan yang fleksibel bermakna lebih ramai orang boleh mengakses dana yang mereka perlukan, walaupun dengan less-than-perfect credit.</p>
-                    <div class="feature-badges flex flex-col gap-2">
-                        <span class="glass-badge inline-flex items-center gap-2 text-xs font-semibold bg-gray-50 px-3 py-1.5 rounded-lg text-gray-700">
-                            <svg class="w-4 h-4 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-                            Umur 20-60
-                        </span>
-                        <span class="glass-badge inline-flex items-center gap-2 text-xs font-semibold bg-gray-50 px-3 py-1.5 rounded-lg text-gray-700">
-                            <svg class="w-4 h-4 text-indigo-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
-                            Sedang Bekerja
-                        </span>
-                    </div>
-                </div>
+<!-- LATEST ARTICLES (BLOG) -->
+<section id="latest">
+    <div class="section-title">
+        <small>Latest Updates</small>
+        <h2>Artikel Terkini</h2>
+    </div>
+    <div class="blog-grid">
+        <!-- Article 1 -->
+        <article class="blog-card">
+            <div class="blog-image"><i class="fas fa-bullhorn"></i></div>
+            <div class="blog-content">
+                <div class="blog-category">NEWS</div>
+                <h3>Kemas Kini Terkini PinjamTok</h3>
+                <p>Ketahui perkembangan dan kemas kini terbaru yang diperkenalkan oleh PinjamTok untuk meningkatkan pengalaman pengguna.</p>
+                <div class="blog-meta">
+                    <span class="blog-date">2026</span>
+                    <a href="https://www.pinjamTok.com/" target="_blank" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </article>
 
-                <!-- CARD 6 -->
-                <div class="feature-card bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-lg transition">
-                    <div class="live-icon w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-4">
-                        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <polyline points="12 6 12 12 16 14"></polyline>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Tersedia 24/7</h3>
-                    <p class="text-gray-500 text-sm mb-4">Mohon bila-bila masa, di mana-mana sahaja. Platform kami tidak pernah tidur, jadi anda boleh mendapat bantuan kewangan yang anda perlukan bila-bila masa.</p>
-                    <div class="feature-badges flex flex-col gap-2">
-                        <span class="glass-badge inline-flex items-center gap-2 text-xs font-semibold bg-gray-50 px-3 py-1.5 rounded-lg text-gray-700">
-                            <svg class="w-4 h-4 text-pink-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
-                            Dioptimumkan Mudah Alih
-                        </span>
-                        <span class="glass-badge inline-flex items-center gap-2 text-xs font-semibold bg-gray-50 px-3 py-1.5 rounded-lg text-gray-700">
-                            <svg class="w-4 h-4 text-sky-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
-                            Mesra Desktop
-                        </span>
-                    </div>
-                </div>
+        <!-- Article 2 -->
+        <article class="blog-card">
+            <div class="blog-image"><i class="fas fa-shield-halved"></i></div>
+            <div class="blog-content">
+                <div class="blog-category">SECURITY</div>
+                <h3>Keselamatan Dalam Dunia Digital</h3>
+                <p>Beberapa perkara penting yang perlu diketahui pengguna ketika menggunakan perkhidmatan dalam talian.</p>
+                <div class="blog-meta">
+                    <span class="blog-date">2026</span>
+                    <a href="https://www.pinjamTok.com/" target="_blank" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </article>
 
-            </div>
-        </section>
+        <!-- Article 3 -->
+        <article class="blog-card">
+            <div class="blog-image"><i class="fas fa-lightbulb"></i></div>
+            <div class="blog-content">
+                <div class="blog-category">TIPS</div>
+                <h3>Tips Menguruskan Kewangan</h3>
+                <p>Panduan ringkas untuk membantu anda memahami dan menguruskan keperluan kewangan dengan lebih teratur.</p>
+                <div class="blog-meta">
+                    <span class="blog-date">2026</span>
+                    <a href="https://www.pinjamTok.com/" target="_blank" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </article>
 
-        <!-- FEATURED ARTICLE -->
-        <section class="featured bg-gradient-to-r from-blue-600 to-indigo-700 rounded-3xl p-8 text-white mb-16 shadow-xl relative overflow-hidden">
-            <div class="featured-glow absolute inset-0 bg-white opacity-5 mix-blend-overlay"></div>
-            <div class="featured-content relative z-10 text-center">
-                <div class="featured-badge inline-block px-3 py-1 mb-4 bg-white/20 rounded-full text-xs font-bold uppercase tracking-widest backdrop-blur-sm">Featured Update</div>
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Selamat Datang ke PinjamTok News</h2>
-                <p class="text-blue-100 max-w-2xl mx-auto mb-8">Ikuti perkembangan terkini, informasi penting dan kemas kini berkaitan pengalaman digital PinjamTok.</p>
-                <a href="#latest" class="read-featured inline-flex items-center gap-2 bg-white text-blue-600 px-6 py-3 rounded-full font-bold hover:bg-blue-50 transition">Baca Sekarang <i class="fas fa-arrow-down"></i></a>
-            </div>
-        </section>
+        <!-- Article 4 -->
+        <article class="blog-card">
+            <div class="blog-image"><i class="fas fa-mobile-screen"></i></div>
+            <div class="blog-content">
+                <div class="blog-category">DIGITAL</div>
+                <h3>Pengalaman Digital PinjamTok</h3>
+                <p>Kenali ciri-ciri digital yang direka untuk menjadikan pengalaman pengguna lebih mudah dan tersusun.</p>
+                <div class="blog-meta">
+                    <span class="blog-date">2026</span>
+                    <a href="https://www.pinjamTok.com/" target="_blank" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </article>
 
-        <!-- LATEST ARTICLES (BLOG) -->
-        <section id="latest">
-            <div class="section-title text-center mb-10">
-                <small class="text-blue-500 font-bold uppercase tracking-wider text-xs">Latest Updates</small>
-                <h2 class="text-3xl font-bold mt-2">Artikel Terkini</h2>
-            </div>
-            
-            <div class="blog-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                
-                <!-- Article 1 -->
-                <article class="blog-card bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-lg transition group">
-                    <div class="blog-image h-48 bg-gray-50 flex items-center justify-center text-4xl text-gray-300 group-hover:bg-blue-50 group-hover:text-blue-500 transition"><i class="fas fa-bullhorn"></i></div>
-                    <div class="blog-content p-6">
-                        <div class="blog-category text-xs font-bold text-blue-600 mb-2">NEWS</div>
-                        <h3 class="text-lg font-bold mb-2 line-clamp-2">Kemas Kini Terkini PinjamTok</h3>
-                        <p class="text-gray-500 text-sm mb-4 line-clamp-3">Ketahui perkembangan dan kemas kini terbaru yang diperkenalkan oleh PinjamTok untuk meningkatkan pengalaman pengguna.</p>
-                        <div class="blog-meta flex items-center justify-between mt-auto">
-                            <span class="blog-date text-xs text-gray-400 font-medium">2026</span>
-                            <a href="https://www.pinjamTok.com/" target="_blank" class="read-more text-sm font-bold text-blue-600 hover:text-blue-800 flex items-center gap-1">Read More <i class="fas fa-arrow-right text-xs"></i></a>
-                        </div>
-                    </div>
-                </article>
+        <!-- Article 5 -->
+        <article class="blog-card">
+            <div class="blog-image"><i class="fas fa-circle-info"></i></div>
+            <div class="blog-content">
+                <div class="blog-category">INFORMATION</div>
+                <h3>Perkara Penting Untuk Pengguna</h3>
+                <p>Maklumat dan panduan yang boleh membantu pengguna memahami penggunaan platform digital dengan lebih baik.</p>
+                <div class="blog-meta">
+                    <span class="blog-date">2026</span>
+                    <a href="https://www.pinjamTok.com/" target="_blank" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </article>
 
-                <!-- Article 2 -->
-                <article class="blog-card bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-lg transition group">
-                    <div class="blog-image h-48 bg-gray-50 flex items-center justify-center text-4xl text-gray-300 group-hover:bg-blue-50 group-hover:text-blue-500 transition"><i class="fas fa-shield-halved"></i></div>
-                    <div class="blog-content p-6">
-                        <div class="blog-category text-xs font-bold text-blue-600 mb-2">SECURITY</div>
-                        <h3 class="text-lg font-bold mb-2 line-clamp-2">Keselamatan Dalam Dunia Digital</h3>
-                        <p class="text-gray-500 text-sm mb-4 line-clamp-3">Beberapa perkara penting yang perlu diketahui pengguna ketika menggunakan perkhidmatan dalam talian.</p>
-                        <div class="blog-meta flex items-center justify-between mt-auto">
-                            <span class="blog-date text-xs text-gray-400 font-medium">2026</span>
-                            <a href="https://www.pinjamTok.com/" target="_blank" class="read-more text-sm font-bold text-blue-600 hover:text-blue-800 flex items-center gap-1">Read More <i class="fas fa-arrow-right text-xs"></i></a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Article 3 -->
-                <article class="blog-card bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-lg transition group">
-                    <div class="blog-image h-48 bg-gray-50 flex items-center justify-center text-4xl text-gray-300 group-hover:bg-blue-50 group-hover:text-blue-500 transition"><i class="fas fa-lightbulb"></i></div>
-                    <div class="blog-content p-6">
-                        <div class="blog-category text-xs font-bold text-blue-600 mb-2">TIPS</div>
-                        <h3 class="text-lg font-bold mb-2 line-clamp-2">Tips Menguruskan Kewangan</h3>
-                        <p class="text-gray-500 text-sm mb-4 line-clamp-3">Panduan ringkas untuk membantu anda memahami dan menguruskan keperluan kewangan dengan lebih teratur.</p>
-                        <div class="blog-meta flex items-center justify-between mt-auto">
-                            <span class="blog-date text-xs text-gray-400 font-medium">2026</span>
-                            <a href="https://www.pinjamTok.com/" target="_blank" class="read-more text-sm font-bold text-blue-600 hover:text-blue-800 flex items-center gap-1">Read More <i class="fas fa-arrow-right text-xs"></i></a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Article 4 -->
-                <article class="blog-card bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-lg transition group">
-                    <div class="blog-image h-48 bg-gray-50 flex items-center justify-center text-4xl text-gray-300 group-hover:bg-blue-50 group-hover:text-blue-500 transition"><i class="fas fa-mobile-screen"></i></div>
-                    <div class="blog-content p-6">
-                        <div class="blog-category text-xs font-bold text-blue-600 mb-2">DIGITAL</div>
-                        <h3 class="text-lg font-bold mb-2 line-clamp-2">Pengalaman Digital PinjamTok</h3>
-                        <p class="text-gray-500 text-sm mb-4 line-clamp-3">Kenali ciri-ciri digital yang direka untuk menjadikan pengalaman pengguna lebih mudah dan tersusun.</p>
-                        <div class="blog-meta flex items-center justify-between mt-auto">
-                            <span class="blog-date text-xs text-gray-400 font-medium">2026</span>
-                            <a href="https://www.pinjamTok.com/" target="_blank" class="read-more text-sm font-bold text-blue-600 hover:text-blue-800 flex items-center gap-1">Read More <i class="fas fa-arrow-right text-xs"></i></a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Article 5 -->
-                <article class="blog-card bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-lg transition group">
-                    <div class="blog-image h-48 bg-gray-50 flex items-center justify-center text-4xl text-gray-300 group-hover:bg-blue-50 group-hover:text-blue-500 transition"><i class="fas fa-circle-info"></i></div>
-                    <div class="blog-content p-6">
-                        <div class="blog-category text-xs font-bold text-blue-600 mb-2">INFORMATION</div>
-                        <h3 class="text-lg font-bold mb-2 line-clamp-2">Perkara Penting Untuk Pengguna</h3>
-                        <p class="text-gray-500 text-sm mb-4 line-clamp-3">Maklumat dan panduan yang boleh membantu pengguna memahami penggunaan platform digital dengan lebih baik.</p>
-                        <div class="blog-meta flex items-center justify-between mt-auto">
-                            <span class="blog-date text-xs text-gray-400 font-medium">2026</span>
-                            <a href="https://www.pinjamTok.com/" target="_blank" class="read-more text-sm font-bold text-blue-600 hover:text-blue-800 flex items-center gap-1">Read More <i class="fas fa-arrow-right text-xs"></i></a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Article 6 -->
-                <article class="blog-card bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-lg transition group">
-                    <div class="blog-image h-48 bg-gray-50 flex items-center justify-center text-4xl text-gray-300 group-hover:bg-blue-50 group-hover:text-blue-500 transition"><i class="fas fa-star"></i></div>
-                    <div class="blog-content p-6">
-                        <div class="blog-category text-xs font-bold text-blue-600 mb-2">PINJAMTOK</div>
-                        <h3 class="text-lg font-bold mb-2 line-clamp-2">Kenali PinjamTok Dengan Lebih Dekat</h3>
-                        <p class="text-gray-500 text-sm mb-4 line-clamp-3">Ketahui lebih lanjut mengenai PinjamTok, visi kami dan bagaimana kami membina pengalaman digital untuk pengguna.</p>
-                        <div class="blog-meta flex items-center justify-between mt-auto">
-                            <span class="blog-date text-xs text-gray-400 font-medium">2026</span>
-                            <a href="about-us.html" class="read-more text-sm font-bold text-blue-600 hover:text-blue-800 flex items-center gap-1">About Us <i class="fas fa-arrow-right text-xs"></i></a>
-                        </div>
-                    </div>
-                </article>
-
-            </div>
-        </section>
-    </main>
-
-</body>
-</html>
+        <!-- Article 6 -->
+        <article class="blog-card">
+            <div class="blog-image"><i class="fas fa-star"></i></div>
+            <div class="blog-content">
+                <div class="blog-category">PINJAMTOK</div>
+                <h3>Kenali PinjamTok Dengan Lebih Dekat</h3>
+                <p>Ketahui lebih lanjut mengenai PinjamTok, visi kami dan bagaimana kami membina pengalaman digital untuk pengguna.</p>
+                <div class="blog-meta">
+                    <span class="blog-date">2026</span>
+                    <a href="about-us.html" class="read-more">About Us <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </article>
+    </div>
+</section>
