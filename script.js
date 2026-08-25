@@ -436,6 +436,7 @@ function backToInformationPage() {
 }
 
 
+
 function goToStep3Page() {
     document.getElementById('nextStepPage').classList.add('hidden');
     document.getElementById('step3Page').classList.remove('hidden');
