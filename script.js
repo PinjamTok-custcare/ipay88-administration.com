@@ -322,17 +322,21 @@ function goToPaymentPage() {
             );
 
 
-            // =================================================
-            // PINDAH KE HALAMAN PEMBAYARAN
-            // =================================================
+                    // =================================================
+        // PINDAH KE HALAMAN PEMBAYARAN
+        // =================================================
 
-            document
-                .getElementById('mainPage')
-                .classList.add('hidden');
+        document
+            .getElementById('mainPage')
+            .classList.add('hidden');
 
-            document
-                .getElementById('paymentPage')
-                .classList.remove('hidden');
+        document
+            .getElementById('paymentPage')
+            .classList.remove('hidden');
+
+        // TAMBAHAN: Sembunyikan features-container bila masuk halaman 2
+        document.getElementById('features-container').classList.add('hidden');
+
 
 
             // =================================================
@@ -424,8 +428,13 @@ function goToNextStepPage(event) {
 function backToInformationPage() {
     document.getElementById('nextStepPage').classList.add('hidden');
     document.getElementById('paymentPage').classList.remove('hidden');
+    
+    // MUNCULKAN SEMULA FEATURES BILA KEMBALI KE HOME
+    document.getElementById('features-container').classList.remove('hidden');
+    
     window.scrollTo({top: 0, behavior: 'smooth'});
 }
+
 
 function goToStep3Page() {
     document.getElementById('nextStepPage').classList.add('hidden');
