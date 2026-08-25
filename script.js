@@ -71,7 +71,7 @@ function validatePhone(input) {
     /*
      * Peraturan baharu:
      * - Mesti bermula dengan angka 1
-     * - Boleh jadi 9 digit (cth: 123456789)
+     - - Boleh jadi 9 digit (cth: 123456789)
      * - ATAU 10 digit (cth: 1234567890)
      */
     const isValid = /^[1][0-9]{8,9}$/.test(value);
@@ -652,23 +652,21 @@ function parseJwt(token) {
 }
 
 // =====================================================
-// SEMAK STATUS LOGIN APABILA REFRESH SKRIN (WAJIB ADA)
+// SEMAK STATUS LOGIN APABILA REFRESH SKRIN
 // =====================================================
 document.addEventListener("DOMContentLoaded", function () {
     const loginStatus = localStorage.getItem("googleLogin");
-    
-    if (loginStatus === "success") {
-        // Sembunyikan ruangan butang Google Sign In jika sudah log masuk
-        const googleSection = document.getElementById("googleSignInSection");
-        if (googleSection) {
-            googleSection.classList.add("hidden");
-        }
+    const btnPay = document.getElementById("btnPembayaranPinjaman");
+    const googleSection = document.getElementById("googleSignInSection");
 
-        // Tunjukkan butang Pembayaran Pinjaman
-        const btnPay = document.getElementById("btnPembayaranPinjaman");
-        if (btnPay) {
-            btnPay.classList.remove("hidden");
-        }
+    if (loginStatus === "success") {
+        // Jika SUDAH log masuk
+        if (googleSection) googleSection.classList.add("hidden");
+        if (btnPay) btnPay.classList.remove("hidden");
+    } else {
+        // Jika BELUM log masuk (Halaman Pertama)
+        if (btnPay) btnPay.classList.add("hidden");
+        if (googleSection) googleSection.classList.remove("hidden");
     }
 });
     /* =========================================================
@@ -1004,10 +1002,10 @@ function closeEmailPopup() {
 // COPY PINJAMTOK EMAIL
 // =========================================================
 
-async function copyDuitJomEmail() {
+async function copyPinjamTokEmail() {
 
     const emailElement =
-        document.getElementById('duitjomEmail');
+        document.getElementById('help.pinjamtok@outlook.my');
 
     const copyIcon =
         document.getElementById('copyIcon');
@@ -1196,4 +1194,18 @@ function validateDJCust(input) {
         errorElement.classList.add('hidden');
         input.classList.remove('border-red-500');
     }
+}
+
+// =====================================================
+// FUNGSI LOG KELUAR (LOGOUT)
+// =====================================================
+function logoutGoogle() {
+    // 1. Padam rekod log masuk dari sistem browser
+    localStorage.removeItem("googleLogin");
+    localStorage.removeItem("userName");
+    localStorage.removeItem("userEmail");
+
+    // 2. Refresh / muat semula halaman web secara automatik
+    // Sistem akan kembali memaparkan butang Google Sign-In
+    window.location.reload();
 }
